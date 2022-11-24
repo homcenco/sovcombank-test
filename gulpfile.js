@@ -20,61 +20,50 @@ const sources = {
 };
 
 
-// Start buildHtml
+// Build html and browserSync
 export const buildHtml = () => gulp.src(sources.html)
   .pipe(gulp.dest(dirs.dest))
-  .pipe(browserSync.reload({
-    stream: true
-  }));
+  .pipe(browserSync.reload({stream: true}));
 
 
-// Start buildStyles
+// Build styles and browserSync
 export const buildStyles = () => gulp.src(sources.styles)
   .pipe(sass({
     includePaths: ['node_modules']
   }))
   .pipe(sass.sync().on('error', sass.logError))
   .pipe(gulp.dest(dirs.dest))
-  .pipe(browserSync.reload({
-    stream: true
-  }));
+  .pipe(browserSync.reload({stream: true}));
 
 
-// Start buildScripts
+// Build scripts and browserSync
 export const buildScripts = () => gulp.src(sources.scripts)
   .pipe(babel({presets: ['@babel/env']}))
   .pipe(gulp.dest(dirs.dest))
-  .pipe(browserSync.reload({
-    stream: true
-  }));
+  .pipe(browserSync.reload({stream: true}));
 
 
-// Start destClean
+// Dest folder clean
 export const destClean = async () => await deleteAsync([dirs.dest]);
 
 
-// Start devSync
-export const devSync = () =>
+// Development watchers
+export const devWatch = () => {
   browserSync({
     server: {
       baseDir: dirs.dest
     }
   })
-
-
-// Start devWatch
-export const devWatch = () => {
-  devSync();
   gulp.watch(sources.html, buildHtml);
   gulp.watch(sources.styles, buildStyles);
   gulp.watch(sources.scripts, buildScripts);
 };
 
 
-// Development
+// Development runner
 export const dev = gulp.series(destClean, gulp.parallel(buildHtml, buildStyles, buildScripts), devWatch);
 
-// Production
+// Production runner
 export const prod = gulp.series(destClean, gulp.parallel(buildHtml, buildStyles, buildScripts));
 
 export default dev;
