@@ -1,8 +1,13 @@
 // Imports
 import gulp from 'gulp';
+import autoprefixer from 'gulp-autoprefixer';
 import babel from 'gulp-babel';
+import concat from 'gulp-concat';
+import csso from 'gulp-csso';
+import htmlmin from 'gulp-htmlmin';
 import gulpSass from 'gulp-sass';
 import browserSync from 'browser-sync';
+import uglify from 'gulp-uglify';
 import {deleteAsync} from 'del';
 import dartSass from 'sass';
 
@@ -23,6 +28,10 @@ const sources = {
 
 // Build html and browserSync
 export const buildHtml = () => gulp.src(sources.html)
+  .pipe(htmlmin({
+    collapseWhitespace: true,
+    removeComments: true
+  }))
   .pipe(gulp.dest(dirs.dest))
   .pipe(browserSync.reload({stream: true}));
 
@@ -34,18 +43,32 @@ export const buildImages = () => gulp.src(sources.images)
 
 
 // Build styles and browserSync
-export const buildStyles = () => gulp.src(sources.styles)
-  .pipe(sass({
-    includePaths: ['node_modules']
+export const buildStyles = () => gulp.src(dirs.src + '/css/main.scss')
+  .pipe(sass.sync({
+    outputStyle: 'expanded',
+    precision: 10,
+    includePaths: [
+      'node_modules',
+      sources.styles
+    ],
+    onError: console.error.bind(console, 'Sass error:')
   }))
-  .pipe(sass.sync().on('error', sass.logError))
-  .pipe(gulp.dest(dirs.dest))
+  .pipe(autoprefixer({
+    overrideBrowserslist: [
+      "> 0.5%, last 100 versions"
+    ],
+    cascade: false
+  }))
+  .pipe(csso())
+  .pipe(gulp.dest(dirs.dest + '/css'))
   .pipe(browserSync.reload({stream: true}));
 
 
 // Build scripts and browserSync
 export const buildScripts = () => gulp.src(sources.scripts)
   .pipe(babel({presets: ['@babel/env']}))
+  .pipe(concat('js/main.js'))
+  .pipe(uglify())
   .pipe(gulp.dest(dirs.dest))
   .pipe(browserSync.reload({stream: true}));
 

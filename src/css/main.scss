@@ -1,14 +1,3 @@
-@import 'normalize.css/normalize';
-
-@import 'themes/default';
-
-@import 'global/custom';
-@import 'global/header';
-@import 'global/keyframes';
-
-@import 'media/tablet';
-@import 'media/laptop';
-
 /*
   Minimum body size = 280px
 
@@ -20,3 +9,14 @@
   (.current) – added dynamic to a category link if is as window path
   (.dropdown) - added to a category link if has a dropdown menu
  */
+
+@import 'normalize.css/normalize';
+
+@import 'themes/default';
+
+@import 'global/custom';
+@import 'global/header';
+@import 'global/keyframes';
+
+@import 'media/tablet';
+@import 'media/laptop';

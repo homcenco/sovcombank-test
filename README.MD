@@ -1,13 +1,23 @@
 # Sovcombank Test
 A post offer employment test for the "Web Designer" position. Alpaca menu design.
 
-## Setup
+## Installing and running
 > Tested in macOS (Safari, Chrome)
 
-Run in terminal commands:
+To install type in terminal commands:
 ```bash
 git clone https://github.com/homcenco/sovcombank-test.git
+cd sovcombank-test
+npm install
+```
+
+To run development watchers with browser sync:
+```bash
 npm run dev
+```
+
+To run production builder:
+```bash
 npm run prod
 ```
 

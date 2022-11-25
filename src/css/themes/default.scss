@@ -1,10 +1,6 @@
 @import '../vars/index';
 
 :root {
-  --text-primary-color: var(--color-light-text-primary);
-  --text-secondary-color: var(--color-light-text-secondary);
-  --text-tertiary-color: var(--color-light-text-tertiary);
-  --focus-color: var(--color-light-border-link);
   --font-family: var(--font-family-system);
   --disabled-cursor: not-allowed;
   --arrow-transform: rotate(180deg);
