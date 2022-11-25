@@ -161,10 +161,12 @@
       background-color: var(--color-dark-10);
     }
   }
-  .header__menu-item:not(:last-child),
+  .header__menu-item:not(:last-child) {
+    border-bottom: none;
+  }
   .dropdown__menu-item:not(:last-child),
   .dropdown__submenu-item:not(:last-child) {
-    border-bottom: none;
+    border-bottom: 1px solid var(--color-dark-60);
   }
 }
 
