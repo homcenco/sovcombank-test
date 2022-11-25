@@ -1,6 +1,16 @@
 # Sovcombank Test
 A post offer employment test for the "Web Designer" position. Alpaca menu design.
 
+## Setup
+> Tested in macOS (Safari, Chrome)
+
+Run in terminal commands:
+```bash
+git clone https://github.com/homcenco/sovcombank-test.git
+npm run dev
+npm run prod
+```
+
 ## Alpaca menu design
 ### Desktop
 - Screen size `> 768px`.
