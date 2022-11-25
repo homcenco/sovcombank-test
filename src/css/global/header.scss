@@ -6,7 +6,8 @@
 
 .header__container,
 .header__menu,
-.header__phone {
+.header__phone,
+.header__phone-link {
   align-items: center;
   display: flex;
 }
@@ -39,13 +40,12 @@
   width: 1.125rem;
 }
 
-.header__menu {
-  order: 2;
+.header__phone-text {
+  display: none;
 }
 
-.header__menu-items,
-.header__phone-link {
-  display: none;
+.header__menu {
+  order: 2;
 }
 
 .header__menu-button {
@@ -101,6 +101,7 @@
 
 .header__menu-items {
   background-color: var(--color-dark-10);
+  display: none;
   max-width: 365px;
   min-height: 100vh;
   overflow: auto;

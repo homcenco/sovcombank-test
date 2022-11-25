@@ -5,6 +5,9 @@
     order: 2;
   }
   .header__phone-link {
+    cursor: pointer;
+  }
+  .header__phone-text {
     display: none;
   }
   .header__menu {
@@ -173,7 +176,7 @@
     animation: none;
     margin-left: 0;
   }
-  .header__phone-link {
+  .header__phone-text {
     display: block;
   }
 }

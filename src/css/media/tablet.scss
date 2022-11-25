@@ -5,14 +5,16 @@
   }
   .header__phone-link {
     color: var(--color-white);
-    display: block;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.3334;
     text-decoration: none;
 
     &:hover {
       color: var(--color-yellow);
     }
+  }
+  .header__phone-text {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3334;
   }
 }
