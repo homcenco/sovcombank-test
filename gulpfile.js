@@ -16,12 +16,19 @@ const sass = gulpSass(dartSass);
 const sources = {
   styles: `${dirs.src}/**/*.scss`,
   scripts: `${dirs.src}/**/*.js`,
+  images: `${dirs.src}/**/*.+(svg|jpg|png)`,
   html: `${dirs.src}/**/*.html`
 };
 
 
 // Build html and browserSync
 export const buildHtml = () => gulp.src(sources.html)
+  .pipe(gulp.dest(dirs.dest))
+  .pipe(browserSync.reload({stream: true}));
+
+
+// Build images and browserSync
+export const buildImages = () => gulp.src(sources.images)
   .pipe(gulp.dest(dirs.dest))
   .pipe(browserSync.reload({stream: true}));
 
@@ -55,15 +62,27 @@ export const devWatch = () => {
     }
   })
   gulp.watch(sources.html, buildHtml);
+  gulp.watch(sources.images, buildImages);
   gulp.watch(sources.styles, buildStyles);
   gulp.watch(sources.scripts, buildScripts);
 };
 
 
 // Development runner
-export const dev = gulp.series(destClean, gulp.parallel(buildHtml, buildStyles, buildScripts), devWatch);
+export const dev = gulp.series(
+    destClean,
+    gulp.parallel(
+      buildHtml, buildImages, buildStyles, buildScripts
+    ),
+    devWatch
+  );
 
 // Production runner
-export const prod = gulp.series(destClean, gulp.parallel(buildHtml, buildStyles, buildScripts));
+export const prod = gulp.series(
+    destClean,
+    gulp.parallel(
+      buildHtml, buildImages, buildStyles, buildScripts
+    )
+  );
 
 export default dev;

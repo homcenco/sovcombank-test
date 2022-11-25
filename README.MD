@@ -24,7 +24,7 @@ A post offer employment test for the "Web Designer" position. Alpaca menu design
 <img src="https://raw.githubusercontent.com/homcenco/sovcombank-test/main/docs/design-ipad.png" alt="Ipad design">
 
 ### Iphone
-- Screen size `<= 365px`.
+- Screen size `<= 375px`.
 - Menu effects as in `Ipad` design.
 - Design as shown in the image below.
 
