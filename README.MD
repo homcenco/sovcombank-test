@@ -47,6 +47,7 @@ npm run prod
 
 
 ## TO-DO
-- [ ] Adaptive design
-- [ ] Menu script
-- [x] Only `HTML`/`CSS`/`BEM`/`GULP`
+- [x] Adaptive design test
+- [x] Responsive design test
+- [x] Menu script add
+- [x] Use only `HTML`/`CSS`/`BEM`/`GULP`
