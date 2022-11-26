@@ -156,6 +156,7 @@
           /* Header Menu dropdown item */
 
           cursor: pointer;
+          transition: all ease-in-out 0.3s;
 
           &:last-child {
             /* Header Menu dropdown item :last-child */
