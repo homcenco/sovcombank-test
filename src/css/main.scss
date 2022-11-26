@@ -3,10 +3,10 @@
 
   Screen sizes for mobile 280px - 375px
   Screen sizes for tablet 376px - 768px
-  Screen sizes for laptop 769px - 900px - 1100px
+  Screen sizes for desktop 769px - 900px - 1100px
 
-  (.active) -  added by javascript when clicked (.dropdown__menu-link) (see main.js)
-  (.current) – added dynamic to a category link if is as window path
+  (.active) - injected by javascript on click (see main.js)
+  (.current) – added dynamic to a menu link if client is in current category
   (.dropdown) - added to a category link if has a dropdown menu
  */
 
@@ -15,8 +15,10 @@
 @import 'themes/default';
 
 @import 'global/custom';
-@import 'global/header';
 @import 'global/keyframes';
 
-@import 'media/tablet';
-@import 'media/laptop';
+@import 'blocks/header/header';
+@import 'blocks/header/header-tablet';
+@import 'blocks/header/header-desktop';
+
+@import 'blocks/layout/layout';

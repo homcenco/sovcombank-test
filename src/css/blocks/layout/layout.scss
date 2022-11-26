@@ -1,0 +1,23 @@
+.layout {
+
+  &__header {
+    /* Layout header */
+
+    &-menu {
+      /* Layout header menu */
+
+      background-color: rgba(0, 0, 0, 0.5);;
+      display: none;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
+
+      &.active {
+        /* Layout header menu .active */
+
+        display: block;
+      }
+    }
+  }
+}

@@ -53,10 +53,10 @@
       </a>
     </div>
     <div class="header__menu">
-      <div class="header__menu-button" onclick="toggleMenu()">
-        <span class="header__menu-button__line"></span>
-        <span class="header__menu-button__line"></span>
-        <span class="header__menu-button__line"></span>
+      <div class="header__menu-burger" onclick="toggleMenu()">
+        <span class="header__menu-burger__line"></span>
+        <span class="header__menu-burger__line"></span>
+        <span class="header__menu-burger__line"></span>
       </div>
       <div class="header__menu-items">
         <div class="header__menu-item">
@@ -64,28 +64,28 @@
         </div>
         <div class="header__menu-item">
           <span class="header__menu-link dropdown" onclick="makeActive(this);" title="Основное меню">Основное меню</span>
-          <div class="dropdown__menu">
-            <div class="dropdown__menu-items">
-              <div class="dropdown__menu-item">
-                <a href="" class="dropdown__menu-link">Заказать вёрстку</a>
+          <div class="header__menu-dropdown">
+            <div class="header__menu-dropdown__items">
+              <div class="header__menu-dropdown__item">
+                <a href="" class="header__menu-dropdown__link">Заказать вёрстку</a>
               </div>
-              <div class="dropdown__menu-item">
-                <a href="" class="dropdown__menu-link">Отправить макет на проверку</a>
+              <div class="header__menu-dropdown__item">
+                <a href="" class="header__menu-dropdown__link">Отправить макет на проверку</a>
               </div>
-              <div class="dropdown__menu-item">
-                <a href="" class="dropdown__menu-link">Хочу работать у вас</a></div>
-              <div class="dropdown__menu-item">
-                <span class="dropdown__menu-link dropdown" onclick="makeActive(this);">Есть предложение по работе с клиентами и не только с ними</span>
-                <div class="dropdown__submenu">
-                  <div class="dropdown__submenu-items">
-                    <div class="dropdown__submenu-item">
-                      <a href="" class="dropdown__submenu-link">У меня есть оффер</a>
+              <div class="header__menu-dropdown__item">
+                <a href="" class="header__menu-dropdown__link">Хочу работать у вас</a></div>
+              <div class="header__menu-dropdown__item">
+                <span class="header__menu-dropdown__link dropdown" onclick="makeActive(this);">Есть предложение по работе с клиентами и не только с ними</span>
+                <div class="header__menu-dropdown">
+                  <div class="header__menu-dropdown__items">
+                    <div class="header__menu-dropdown__item">
+                      <a href="" class="header__menu-dropdown__link">У меня есть оффер</a>
                     </div>
-                    <div class="dropdown__submenu-item">
-                      <a href="" class="dropdown__submenu-link">Сделать партнёром</a>
+                    <div class="header__menu-dropdown__item">
+                      <a href="" class="header__menu-dropdown__link">Сделать партнёром</a>
                     </div>
-                    <div class="dropdown__submenu-item">
-                      <a href="" class="dropdown__submenu-link">Есть предложение по работе с переполнением и не только с ними</a>
+                    <div class="header__menu-dropdown__item">
+                      <a href="" class="header__menu-dropdown__link">Есть предложение по работе с переполнением и не только с ними</a>
                     </div>
                   </div>
                 </div>
@@ -103,7 +103,7 @@
     </div>
   </div>
 </header>
-<div class="bg__menu-layout"></div>
+<div class="layout__header-menu"></div>
 
 <!--build:js js/main.min.js -->
 <script src="js/main.js"></script>

@@ -1,0 +1,33 @@
+@media screen and (min-width: 376px) {
+  .header {
+
+    &__phone {
+      /* Header Phone */
+
+      animation: none;
+      margin-left: 0;
+
+      &-link {
+        /* Header Phone link */
+
+        color: var(--color-white);
+        text-decoration: none;
+
+        &:hover {
+          /* Header Phone link :hover */
+
+          color: var(--color-yellow);
+        }
+      }
+
+      &-text {
+        /* Header Phone text */
+
+        display: block;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.3334;
+      }
+    }
+  }
+}
