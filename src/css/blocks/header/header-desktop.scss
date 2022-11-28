@@ -283,6 +283,8 @@
 @media screen and (min-width: 1280px) {
   .header {
     &__logo {
+      /* Header Logo */
+
       margin-left: 1.5rem;
     }
 
@@ -293,6 +295,8 @@
     }
 
     &__phone {
+      /* Header Phone */
+
       margin-right: 2rem;
     }
 
@@ -302,8 +306,44 @@
       margin-left: 3.5rem;
 
       &-item {
+        /* Header Menu item */
+
         &:not(:last-child) {
+          /* Header Menu item &:not(:last-child) */
+
           & > .header__menu-link {
+            /* Header Menu item &:not(:last-child) > .header__menu-link */
+
+            margin-right: 0.25rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .header {
+
+    &__container {
+      /* Header Container */
+
+      margin: 0 auto;
+      max-width: 1440px;
+    }
+
+    &__menu {
+      /* Header Menu */
+
+      &-item {
+        /* Header Menu item */
+
+        &:not(:last-child) {
+          /* Header Menu item &:not(:last-child) */
+
+          & > .header__menu-link {
+            /* Header Menu item &:not(:last-child) > .header__menu-link */
+
             margin-right: 2.22222222rem;
           }
         }
