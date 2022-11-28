@@ -192,7 +192,6 @@
       color: var(--color-white);
       cursor: pointer;
       display: block;
-      font-size: 1rem;
       padding: 1rem 1.2rem;
       position: relative;
       line-height: 2rem;
@@ -215,7 +214,7 @@
           content: "";
           position: absolute;
           bottom: calc(50% - 0.3125rem);
-          right: 0.5rem;
+          right: 1rem;
         }
 
         &.active {
@@ -233,6 +232,12 @@
       }
     }
 
+    &-link {
+      /* Header Menu link */
+
+      font-size: 1.125rem;
+    }
+
     &-dropdown {
       /* Header Menu dropdown */
 
@@ -242,6 +247,12 @@
         /* Header Menu dropdown .active */
 
         display: block;
+      }
+
+      &__link {
+        /* Header Menu dropdown link */
+
+        font-size: 1rem;
       }
     }
 
