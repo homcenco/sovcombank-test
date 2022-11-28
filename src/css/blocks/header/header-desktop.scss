@@ -112,6 +112,12 @@
           /* Header Menu link dropdown */
 
           padding-right: 2rem;
+
+          &:after {
+            /* Header Menu link dropdown :after */
+
+            right: 1rem;
+          }
         }
 
         &.current {
