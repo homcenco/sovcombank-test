@@ -8,7 +8,7 @@ function toggleMenu() {
 }
 
 function makeActive(a) {
-  if (window.innerWidth < 768) {
+  if (window.innerWidth <= 768) {
     let parent = a.parentNode;
     let menu = parent.querySelector(".header__menu-dropdown");
     a.classList.toggle("active");
