@@ -74,8 +74,8 @@
 
             color: var(--color-yellow);
 
-            &:after {
-              /* Header Menu item :hover > .header__menu-link :after */
+            & > .triangle {
+              /* Header Menu item :hover > .header__menu-link > .triangle */
 
               transition: all ease-in-out 0.3s;
               transform: rotateX(-180deg);
@@ -100,23 +100,13 @@
       &-link {
         /* Header Menu link */
 
-        line-height: 1.333333333333333rem;
-        overflow: initial;
         padding: 0.5786rem 1rem;
-        text-overflow: initial;
         transition: all ease-in-out 0.3s;
-        white-space: initial;
 
         &.dropdown {
           /* Header Menu link dropdown */
 
           padding-right: 2rem;
-
-          &:after {
-            /* Header Menu link dropdown :after */
-
-            right: 1rem;
-          }
         }
 
         &.current {
@@ -130,6 +120,15 @@
             color: var(--color-red-10);
           }
         }
+      }
+
+      &-text {
+        /* Header Menu text */
+
+        line-height: 1.333333333333333rem;
+        overflow: initial;
+        text-overflow: initial;
+        white-space: initial;
       }
 
       &-dropdown {
@@ -187,8 +186,8 @@
             & > .header__menu-dropdown__link {
               /* Header Menu dropdown item :hover & > .header__menu-dropdown__link */
 
-              &:after {
-                /* Header Menu dropdown item :hover & > .header__menu-dropdown__link :after */
+              & > .triangle {
+                /* Header Menu dropdown item :hover & > .header__menu-dropdown__link > .triangle */
 
                 transform: rotateY(-180deg);
                 transition: all ease-in-out 0.3s;
@@ -244,20 +243,19 @@
           &.dropdown {
             /* Header Menu dropdown link .dropdown */
 
-            &:after {
-              /* Header Menu dropdown link .dropdown :after */
+            & > .triangle {
+              /* Header Menu dropdown link .dropdown > .triangle */
 
               border-left: 0.375rem solid var(--color-yellow);
               border-bottom: 0.25rem solid transparent;
               border-top: transparent 0.25rem solid;
-              right: 0.5rem;
             }
 
             &.active {
               /* Header Menu dropdown link .dropdown .active */
 
-              &:after {
-                /* Header Menu dropdown link .dropdown .active :after */
+              & > .triangle {
+                /* Header Menu dropdown link .dropdown .active > .triangle */
 
                 transform: rotateY(-180deg);
               }
@@ -297,7 +295,8 @@
     &__container {
       /* Header Container */
 
-      margin: 0 6rem;
+      margin: 0 auto;
+      max-width: 1200px;
     }
 
     &__phone {
@@ -331,11 +330,16 @@
 @media screen and (min-width: 1400px) {
   .header {
 
-    &__container {
-      /* Header Container */
+    &__logo {
+      /* Header Logo */
 
-      margin: 0 auto;
-      max-width: 1440px;
+      margin-left: 0.5rem;
+    }
+
+    &__phone {
+      /* Header Phone */
+
+      margin-right: 0.5rem;
     }
 
     &__menu {
