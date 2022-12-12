@@ -15,7 +15,7 @@ import dartSass from 'sass';
 // Variables
 const dirs = {
   src: 'src',
-  dest: 'build'
+  dest: 'docs'
 };
 const sass = gulpSass(dartSass);
 const sources = {
