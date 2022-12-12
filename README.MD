@@ -32,7 +32,7 @@ npm run prod
 - Design as shown in the image below.
 - `NOTE!` Dropdown menu can be overflowed with items!
 
-<img src="https://raw.githubusercontent.com/homcenco/sovcombank-test/main/docs/design-desktop.png" alt="Desktop design">
+<img src="https://raw.githubusercontent.com/homcenco/sovcombank-test/main/files/design-desktop.png" alt="Desktop design">
 
 ### Ipad
 - Screen size `<= 768px`.
@@ -41,19 +41,19 @@ npm run prod
 - Link (dropdown) click changes triangle direction to the opposite (on default directed down).
 - Design as shown in the image below.
 
-<img src="https://raw.githubusercontent.com/homcenco/sovcombank-test/main/docs/design-ipad.png" alt="Ipad design">
+<img src="https://raw.githubusercontent.com/homcenco/sovcombank-test/main/files/design-ipad.png" alt="Ipad design">
 
 ### Iphone
 - Screen size `<= 375px`.
 - Menu effects as in `Ipad` design.
 - Design as shown in the image below.
 
-<img src="https://raw.githubusercontent.com/homcenco/sovcombank-test/main/docs/design-iphone.png" alt="Iphone design">
+<img src="https://raw.githubusercontent.com/homcenco/sovcombank-test/main/files/design-iphone.png" alt="Iphone design">
 
 ## Docs
-- [Task origin `docx`](https://raw.githubusercontent.com/homcenco/sovcombank-test/main/docs/task_origin.docx)
+- [Task origin `docx`](https://raw.githubusercontent.com/homcenco/sovcombank-test/main/files/task_origin.docx)
 - [Figma origin `link`](https://www.figma.com/file/a8Z21nanfYQ7JnYItyhcns/Untitled)
-- [Figma design `fig`](https://raw.githubusercontent.com/homcenco/sovcombank-test/main/docs/design_origin.fig)
+- [Figma design `fig`](https://raw.githubusercontent.com/homcenco/sovcombank-test/main/files/design_origin.fig)
 
 
 ## TO-DO
