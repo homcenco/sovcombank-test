@@ -1,6 +1,8 @@
 # Sovcombank Test
 A post offer employment test for the "Web Designer" position. Alpaca menu design.
 
+See: https://homcenco.github.io/sovcombank-test/
+
 ## Installing and running
 > Tested in macOS (Safari, Chrome)
 
@@ -50,7 +52,7 @@ npm run prod
 
 <img src="https://raw.githubusercontent.com/homcenco/sovcombank-test/main/files/design-iphone.png" alt="Iphone design">
 
-## Docs
+## Files
 - [Task origin `docx`](https://raw.githubusercontent.com/homcenco/sovcombank-test/main/files/task_origin.docx)
 - [Figma origin `link`](https://www.figma.com/file/a8Z21nanfYQ7JnYItyhcns/Untitled)
 - [Figma design `fig`](https://raw.githubusercontent.com/homcenco/sovcombank-test/main/files/design_origin.fig)
@@ -61,3 +63,4 @@ npm run prod
 - [x] Responsive design test
 - [x] Menu script add
 - [x] Use only `HTML`/`CSS`/`BEM`/`GULP`
+- [ ] HTML amp button nav ul
